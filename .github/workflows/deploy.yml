@@ -10,6 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Connect to Tailscale Network
+      uses: tailscale/github-action@v2
+      with:
+        oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+        oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+        tags: tag:github-actions
+
     - name: Executing remote ssh commands using password/key
       uses: appleboy/ssh-action@master
       with:
