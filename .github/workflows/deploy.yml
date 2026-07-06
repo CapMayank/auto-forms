@@ -26,4 +26,15 @@ jobs:
         script: |
           cd /var/www/boardformmgmt
           git pull origin main
+          
+          # Inject secure config
+          cat << 'EOF' > backend/config.json
+          {
+              "watch_directory": "/app/data/incoming",
+              "processed_directory": "/app/data/processed",
+              "ocr_api_key": "${{ secrets.OCR_API_KEY }}",
+              "confidence_threshold": 80
+          }
+          EOF
+          
           sudo docker-compose -f docker-compose.prod.yml up -d --build
