@@ -19,6 +19,7 @@ dist-ssr/
 # Project specific
 data/
 backend/board_form.db
+backend/config.json
 
 # OS Files
 .DS_Store
