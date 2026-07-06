@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Application Form Class 9th</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 10mm;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            line-height: 1.3;
+            margin: 0;
+            padding: 0;
+            color: #000;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        /* Flexbox for Header to prevent clipping */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .header {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .header h1 {
+            font-size: 16px;
+            margin: 0 0 4px 0;
+            text-transform: uppercase;
+        }
+
+        .header h2 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            text-decoration: underline;
+        }
+
+        /* QR Code Placeholder CSS */
+        .qr-code {
+            width: 70px;
+            height: 70px;
+            border: 1px dashed #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: 10px;
+            color: #555;
+            background-color: #f9f9f9;
+            flex-shrink: 0;
+        }
+
+        .header-spacer {
+            width: 70px;
+            /* Same as QR code to keep the header perfectly centered */
+            flex-shrink: 0;
+        }
+
+        .flex {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .box {
+            display: inline-block;
+            width: 14px;
+            height: 18px;
+            border: 1px solid #000;
+            margin-right: 2px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .box-group {
+            margin-bottom: 5px;
+        }
+
+        table.full-width {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        table.full-width th,
+        table.full-width td {
+            border: 1px solid #000;
+            padding: 4px;
+            text-align: left;
+        }
+
+        /* OCR Grid for names */
+        table.ocr-grid {
+            border-collapse: collapse;
+            margin-top: 3px;
+            margin-bottom: 8px;
+        }
+
+        table.ocr-grid td {
+            width: 16px;
+            height: 20px;
+            border: 1px solid #000;
+        }
+
+        .right-sidebar {
+            float: right;
+            width: 130px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        .photo-box {
+            width: 130px;
+            height: 160px;
+            border: 1px solid #000;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .sign-box {
+            width: 130px;
+            height: 50px;
+            border: 1px solid #000;
+            border-top: none;
+            text-align: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 5px;
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            width: calc(100% - 150px);
+        }
+
+        .section-title {
+            font-weight: bold;
+            background-color: #e0e0e0;
+            padding: 2px 5px;
+            border: 1px solid #000;
+            margin-top: 8px;
+            margin-bottom: 5px;
+        }
+
+        .note {
+            font-size: 10px;
+            font-style: italic;
+        }
+
+        .mb-5 {
+            margin-bottom: 5px;
+        }
+
+        .mb-5 {
+            margin-bottom: 5px;
+        }
+
+        .mt-5 {
+            margin-top: 5px;
+        }
+
+        .mt-10 {
+            margin-top: 10px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .w-100 {
+            width: 100%;
+            border-bottom: 1px solid #000;
+        }
+
+        .code-input-area {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header Section with Flexbox for layout -->
+        <div class="header-container">
+            <div class="header-spacer"></div> <!-- Empty spacer to balance the QR Code -->
+            <div class="header text-center">
+                <h1>Board of Secondary Education, Madhya Pradesh, Bhopal</h1>
+                <h2>ENROLLMENT APPLICATION FORM CLASS 9TH</h2>
+            </div>
+            <div class="qr-code">
+                <img style="height: 80px; width: 80px;" src="QR_9th_Form.jpg" alt="QR Code">
+            </div>
+        </div>
+
+        <div class="flex mb-5" style="border: 1px solid #000; padding: 5px;">
+            <div class="inline-block">
+                <span class="bold">Type of Applicant</span> (Fill relevant code)<br>
+                <div class="code-input-area mt-5">Regular-1 <span class="box"></span></div>
+            </div>
+            <div class="inline-block">
+                <span class="bold">Domicile of M.P.</span> (Yes-1 / No-2)<br>
+                <div class="code-input-area mt-5">Yes / No <span class="box"></span></div>
+            </div>
+            <div class="inline-block">
+                <span class="bold">CWSN Code</span> (Refer Point.11)<br>
+                <div class="mt-5"><span class="box"></span><span class="box"></span></div>
+            </div>
+        </div>
+
+        <div class="mb-5">
+            <span class="bold">1. Have you passed the qualifying exam from another Board/State?</span> If yes, enter
+            details:<br>
+            <table class="full-width mt-5">
+                <tr>
+                    <th style="width:40%">Board Name</th>
+                    <th style="width:20%">Year</th>
+                    <th style="width:20%">Roll Number</th>
+                    <th style="width:20%">Result</th>
+                </tr>
+                <tr>
+                    <td style="height: 20px;"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <div class="right-sidebar">
+                <div class="photo-box">Candidate's Latest Date-stamped Digital Photo</div>
+                <div class="sign-box">Signature of Student inside column</div>
+            </div>
+
+            <div class="main-content">
+                <div class="bold">2. FULL NAME OF CANDIDATE</div>
+                <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <div class="bold">3. FULL NAME OF FATHER</div>
+                <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <div class="bold">4. FULL NAME OF MOTHER</div>
+                <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <div class="mb-5">
+                    <span class="bold">5. Date of Birth (In Digits): DD MM YYYY</span><br>
+                    <div class="mt-5">
+                        <span class="box"></span><span class="box"></span> &nbsp;
+                        <span class="box"></span><span class="box"></span> &nbsp;
+                        <span class="box"></span><span class="box"></span><span class="box"></span><span
+                            class="box"></span>
+                    </div>
+                    <div class="mt-5">
+                        <span class="bold">Date of Birth (In Words):</span>
+                        __________________________________________________
+                    </div>
+                </div>
+
+                <div class="bold">6. Institutional Details:</div>
+                <div class="flex flex-wrap mt-5 mb-5">
+                    <div class="inline-block mb-5">District Code:<br><span class="box"></span><span class="box"></span>
+                    </div>
+                    <div class="inline-block mb-5">Block Code:<br><span class="box"></span><span class="box"></span>
+                    </div>
+                    <div class="inline-block mb-5">School/Forwarding Inst Code:<br><span class="box"></span><span
+                            class="box"></span><span class="box"></span><span class="box"></span><span
+                            class="box"></span><span class="box"></span></div>
+                </div>
+
+                <div class="flex flex-wrap mb-5">
+                    <div class="inline-block mb-5" style="width:45%">District Name: <div class="w-100"></div>
+                    </div>
+                    <div class="inline-block mb-5" style="width:45%">Block Name: <div class="w-100"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap mb-5">
+                    <div class="inline-block mb-5">
+                        <span class="bold">Medium:</span><br>
+                        <div class="code-input-area mt-5">Hindi-1, Eng-2, Urdu-3 <span class="box"></span></div>
+                    </div>
+
+                    <div class="inline-block mb-5">
+                        <span class="bold">Samagra ID:</span><br>
+                        <div class="mt-5"><span class="box"></span><span class="box"></span><span
+                                class="box"></span><span class="box"></span><span class="box"></span><span
+                                class="box"></span><span class="box"></span><span class="box"></span><span
+                                class="box"></span></div>
+                    </div>
+                    <div class="inline-block mb-5">
+                        <span class="bold">Section (A/B/C..):</span><br>
+                        <div class="mt-5"><span class="box"></span></div>
+                    </div>
+                </div>
+
+                <div class="bold mt-5 mb-5" style="color: #000;">Appar ID:</div>
+                <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="section-title">7. Language Subjects:</div>
+        <div class="flex mb-5">
+            <div style="width: 32%;">
+                First Language (Special):<br>
+                <div class="mt-5">
+                    <span class="box"></span><span class="box"></span><span class="box"></span>
+                    <span
+                        style="display:inline-block; border-bottom: 1px solid #000; width: 100px; margin-left: 5px;"></span>
+                </div>
+            </div>
+            <div style="width: 32%;">
+                Second Language (General):<br>
+                <div class="mt-5">
+                    <span class="box"></span><span class="box"></span><span class="box"></span>
+                    <span
+                        style="display:inline-block; border-bottom: 1px solid #000; width: 100px; margin-left: 5px;"></span>
+                </div>
+            </div>
+            <div style="width: 32%;">
+                Third Language (General):<br>
+                <div class="mt-5">
+                    <span class="box"></span><span class="box"></span><span class="box"></span>
+                    <span
+                        style="display:inline-block; border-bottom: 1px solid #000; width: 100px; margin-left: 5px;"></span>
+                </div>
+            </div>
+        </div>
+        <div class="note mb-5">
+            (Only for Blind, Deaf & Dumb students: Instead of Math code 100 or Science code 200, they can opt for Music
+            code 161 or Painting code 162. For all other students, Math, Science, and Social Science are compulsory.)
+        </div>
+
+        <div class="section-title">8. Correspondence Address:</div>
+        <div class="flex flex-wrap mb-5" style="gap: 15px;">
+            <div>House No.: <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div>Colony: <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div>Town: <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div>Block: <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="flex flex-wrap mb-5" style="gap: 15px;">
+            <div>District: <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div>Phone No.: <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div>Pin: <table class="ocr-grid">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section-title">9. छात्र का अन्य विवरण (Other Details of Student):</div>
+        <div class="flex mb-5">
+            <div class="inline-block" style="width: 35%;">
+                <span class="bold">लिंग (Gender):</span><br>
+                <div class="code-input-area mt-5">बालक -1 (Boy-1), बालिका -2 (Girl-2) <span class="box"></span></div>
+            </div>
+            <div class="inline-block" style="width: 60%;">
+                <span class="bold">जाति (Caste):</span><br>
+                <div class="code-input-area mt-5">
+                    अनुसूचित जाति (SC) -1, अनुसूचित जनजाति (ST) -2, पिछड़ा वर्ग (OBC) -3, सामान्य (Gen) -4
+                    <span class="box"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">10. Enclosed Documents (Only for students who passed qualifying exam from other
+            boards)</div>
+        <div class="mb-5">
+            (A) Countersigned Transfer Certificate (TC) &nbsp;&nbsp;&nbsp;&nbsp;
+            (B) Marksheet of qualifying examination &nbsp;&nbsp;&nbsp;&nbsp;
+            (C) Migration Certificate
+        </div>
+
+        <div class="flex mb-5 mt-10" style="gap: 20px;">
+            <div style="width: 50%; border: 1px solid #000; padding: 8px;">
+                <div class="bold text-center">Declaration by Candidate</div>
+                <p style="text-align: justify; margin: 5px 0 25px 0;">
+                    I declare that the information provided above is true. If any false information is found, my exam
+                    application and result may be cancelled at any time.
+                </p>
+                <div style="text-align: right; border-top: 1px dashed #000; padding-top: 5px;">
+                    Signature of Candidate
+                </div>
+            </div>
+
+            <div style="width: 50%; border: 1px solid #000; padding: 8px;">
+                <div class="bold text-center">Certification by Principal / Forwarding Institution</div>
+                <p style="text-align: justify; margin: 5px 0 10px 0;">
+                    I certify after verifying the relevant documents that the student fulfills the prescribed criteria
+                    to appear in the examination.
+                </p>
+                <div style="margin-bottom: 10px;">
+                    Date: ____________________<br>
+                    Inst No: __________________<br>
+                    Inst Name: _________________
+                </div>
+                <div style="text-align: right; border-top: 1px dashed #000; padding-top: 5px;">
+                    Signature with Seal
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">11. CWSN (Children With Special Need):</div>
+        <div class="note">
+            1. Loco Motor Disability/Leprosy Cured Person, Cerebral Palsy &nbsp;|&nbsp;
+            2. Visual Impairment, Blindness, Low vision &nbsp;|&nbsp;
+            3. Hearing Impairment, Deaf, Hard of hearing &nbsp;|&nbsp;
+            4. Speech & Language Disability &nbsp;|&nbsp;
+            5. Specific Learning Disabilities &nbsp;|&nbsp;
+            6. Autism Spectrum Disorder &nbsp;|&nbsp;
+            7. Chronic Neurological Conditions &nbsp;|&nbsp;
+            8. Blood Disorder
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+{
+    "Board_Name": "माध्यमिक शिक्षा मण्डल, मध्यप्रदेश, भोपाल",
+    "Form_Name": "आवेदन पत्र हाईस्कूल परीक्षा (High School Exam Application Form)",
+    "1_Applicant_Details": {
+        "Applicant_Type_Code": "",
+        "Is_MP_Domicile": "",
+        "CWSN_Code": "",
+        "Section": "",
+        "Qualifying_Exam_Other_Board_Details": {
+            "Has_Passed_From_Other_Board_Or_State": "",
+            "Roll_Number": "",
+            "Board_Name": "",
+            "Result": "",
+            "Year": "",
+            "Category_Grade": ""
+        }
+    },
+    "2_Candidate_Full_Name": "",
+    "3_Father_Full_Name": "",
+    "4_Mother_Full_Name": "",
+    "5_Date_of_Birth": {
+        "In_Digits_DDMMYYYY": "",
+        "In_Words": ""
+    },
+    "6_Institution_And_Previous_Exam_Details": {
+        "District_Code": "",
+        "Block_Code": "",
+        "School_Institution_Code": "",
+        "Enrollment_Code": "",
+        "District_Name": "",
+        "Block_Name": "",
+        "MP_Board_Failed_Or_Improvement_Details": {
+            "10th_Roll_No": "",
+            "Year": ""
+        }
+    },
+    "7_Academic_Details": {
+        "First_Language": "",
+        "Second_Language": "",
+        "Third_Language": "",
+        "Medium": "",
+        "Subject_For_Blind_Deaf_Mute": ""
+    },
+    "8_Identification_Details": {
+        "Samagra_ID_SSMID": "",
+        "Sambal_Number": ""
+    },
+    "Media_Uploads": {
+        "Candidate_Digital_Photo_With_Name_Date": "",
+        "Student_Signature_Inside_Column": ""
+    },
+    "9_Correspondence_Address": {
+        "House_No": "",
+        "Colony": "",
+        "Town": "",
+        "Block": "",
+        "District": "",
+        "Pin": "",
+        "Phone_No": ""
+    },
+    "10_Student_Other_Details": {
+        "Gender": "",
+        "Caste": ""
+    },
+    "Special_Provisions_And_Certifications": {
+        "11_Is_Child_Of_Retired_Or_President_Awarded_MP_Teacher": "",
+        "12_Is_Child_Of_Board_Official_Or_Employee": "",
+        "13_Is_Child_Of_Working_Teacher_In_Board_Recognized_School": "",
+        "14_Is_Female_Candidate_With_Family_Income_Under_15000": "",
+        "15_Is_SC_Student_With_Family_Income_Under_100000": "",
+        "16_Is_ST_Student_With_Family_Income_Under_250000": "",
+        "17_Candidate_Serial_Number_In_School_Admission_List_Regular_Only": ""
+    },
+    "18_Attached_Documents_Other_Board": {
+        "Transfer_Certificate": false,
+        "Class_9th_Marksheet": false,
+        "Migration_Certificate": false
+    },
+    "Declarations_And_Signatures": {
+        "Candidate_Signature": "",
+        "Date": "",
+        "Institution_Number": "",
+        "Institution_Name": "",
+        "Principal_Signature_With_Seal": ""
+    }
+}

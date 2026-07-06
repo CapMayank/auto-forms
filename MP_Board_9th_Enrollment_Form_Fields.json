@@ -1,0 +1,69 @@
+{
+    "Board_Name": "माध्यमिक शिक्षा मण्डल, मध्यप्रदेश, भोपाल",
+    "Form_Name": "नामांकन आवेदन पत्र कक्षा 9वीं (Enrollment Application Form Class 9th)",
+    "1_Applicant_Details": {
+        "Applicant_Type_Code": "",
+        "Is_MP_Domicile": "",
+        "CWSN_Code": ""
+    },
+    "Qualifying_Exam_Other_Board_Details": {
+        "Has_Passed_From_Other_Board_Or_State": "",
+        "Year": "",
+        "Roll_Number": "",
+        "Result": "",
+        "Board_Name": ""
+    },
+    "2_Candidate_Full_Name": "",
+    "3_Father_Full_Name": "",
+    "4_Mother_Full_Name": "",
+    "5_Date_of_Birth": {
+        "In_Digits_DDMMYYYY": "",
+        "In_Words": ""
+    },
+    "6_Institution_Details": {
+        "District_Code": "",
+        "Block_Code": "",
+        "School_Institution_Code": "",
+        "District_Name": "",
+        "Block_Name": ""
+    },
+    "7_Academic_Details": {
+        "First_Language_Special": "",
+        "Second_Language_General": "",
+        "Third_Language_General": "",
+        "Medium": "",
+        "Category": "",
+        "Samagra_ID": "",
+        "Section": "",
+        "Subject_For_Blind_Deaf_Mute": ""
+    },
+    "Media_Uploads": {
+        "Candidate_Digital_Photo_With_Name_Date": "",
+        "Student_Signature_Inside_Column": ""
+    },
+    "8_Correspondence_Address": {
+        "House_No": "",
+        "Colony": "",
+        "Town": "",
+        "Block": "",
+        "District": "",
+        "Pin": "",
+        "Phone_No": ""
+    },
+    "9_Student_Other_Details": {
+        "Gender": "",
+        "Caste": ""
+    },
+    "10_Attached_Documents_Other_Board": {
+        "Countersigned_Transfer_Certificate": false,
+        "Qualifying_Exam_Marksheet": false,
+        "Migration_Certificate": false
+    },
+    "Declarations_And_Signatures": {
+        "Candidate_Signature": "",
+        "Date": "",
+        "Institution_Number": "",
+        "Institution_Name": "",
+        "Principal_Signature_With_Seal": ""
+    }
+}

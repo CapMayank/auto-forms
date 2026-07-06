@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+
+  backend:
+    build:
+      context: ./backend
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - ./backend/board_form.db:/app/board_form.db
+    # Environment variables can be added here if needed
+
+  watcher:
+    build:
+      context: ./backend
+    command: python watcher.py
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - ./backend/board_form.db:/app/board_form.db
+    depends_on:
+      - backend
